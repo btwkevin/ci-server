@@ -11,7 +11,7 @@ func WebHook(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("OK"))
 
 	go func() {
-		cmd := exec.Command("./deploy.sh")
+		cmd := exec.Command("../deploy.sh")
 
 		cmd.Stderr = os.Stderr
 		cmd.Stdout = os.Stdout
